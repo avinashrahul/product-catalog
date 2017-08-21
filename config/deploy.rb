@@ -25,8 +25,8 @@ set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 set :puma_preload_app, false
 
+namespace :deploy do
 
-namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
   task :make_dirs do
     on roles(:app) do
@@ -35,11 +35,6 @@ namespace :puma do
     end
   end
 
-  before :start, :make_dirs
-end
-
-namespace :deploy do
-
   desc 'Initial Deploy'
   task :initial do
     on roles(:app) do
@@ -56,6 +51,7 @@ namespace :deploy do
     end
   end
 
+  before :starting,     :make_dirs
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart

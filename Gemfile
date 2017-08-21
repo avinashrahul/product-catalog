@@ -21,8 +21,9 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry'
   gem 'pry-rails'
+  gem 'capistrano'
   gem 'capistrano-rails'
-  gem 'capistrano3-unicorn'
+  gem 'capistrano3-puma'
   gem 'capistrano-bundler'
   gem 'capistrano-rvm'
 end
