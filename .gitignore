@@ -18,3 +18,4 @@
 !/tmp/.keep
 .idea/*
 .byebug_history
+/public/*

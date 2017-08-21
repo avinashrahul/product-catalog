@@ -32,5 +32,6 @@ module ProductCatalog
     config.middleware.use ActionDispatch::Flash
     config.middleware.use Rack::MethodOverride
     config.middleware.use ActionDispatch::Cookies
+    config.assets.precompile += %w( active_admin.js active_admin.css.scss )
   end
 end
