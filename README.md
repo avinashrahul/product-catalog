@@ -1,5 +1,7 @@
 # README
 
+EndPoint: http://54.197.145.134/
+
 CRUD for Products and their Rate Plans using Rails 5.
 
 Steps to run:
