@@ -27,6 +27,8 @@ group :development, :test do
   gem 'capistrano-rvm'
 end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'execjs'
+gem 'therubyracer'
 gem 'activeadmin'
 gem 'devise',      '> 4.x'
 gem 'sass-rails', '~> 5.0'
