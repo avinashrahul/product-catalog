@@ -5,4 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+puts '**** Creating Seed data ****'
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+product1 = Product.create!(title: 'Iphone', description: 'Apple Innovation', start_date: '2017-05-16', end_date: '2017-08-21')
+RatePlan.create!(title: 'ATT Next', description: 'ATT Next Plan', start_date: '2017-08-02', end_date: '2017-08-19', product_id: product1.id, recurrence: 'onetime', price: 500)
+RatePlan.create!(title: 'ATT Super', description: 'ATT Next Super Plan', start_date: '2017-05-12', end_date: '2017-08-19', product_id: product1.id, recurrence: 'monthly', price: 126)
+Product.create!(title: 'Samsung', description: 'Android', start_date: '2017-05-16', end_date: '2017-08-19')
+puts '**** Seed data Completed!! ****'
